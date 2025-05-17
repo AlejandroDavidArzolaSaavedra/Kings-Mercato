@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Mercato Kings - MVP de Partido en la Kings League</title>
-  <meta name="description" content="Estadísticas de MVP por partido en la Kings League Mercato. Análisis de jugadores más valiosos por jornada.">
-  <meta name="keywords" content="Kings League, Mercato, MVP, jugadores, fútbol, estadísticas">
+  <title>Mercato Kings - MVP de Partido</title>
+  <meta name="description" content="Estadísticas de MVP por partido en la Mercato Kings. Análisis de jugadores más valiosos por jornada.">
+  <meta name="keywords" content="Mercato, Kings, MVP, jugadores, fútbol, estadísticas">
   <meta name="author" content="Alejandro David Arzola Saavedra">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,38 +31,32 @@
     <header class="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
       <a href="../index.html" aria-label="Volver a la página principal">
         <div class="flex items-center gap-3">
-          <img src="../assets/kingsIA.svg" alt="Logo Kings League" style="width: 6rem" width="96" height="96">
+          <img src="../assets/kingsIA.svg" alt="Logo Mercato Kings" style="width: 6rem" width="96" height="96">
           <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r" style="color: #8E0303;">
-            MVP de Partido <span class="block text-xl text-gray-600">Kings League Mercato</span>
+            Estadísticas Avanzadas <span class="block text-xl text-gray-600">Mercato Kings</span>
           </h1>
         </div>
       </a>
       
       <div class="flex items-center gap-2">
         <div class="flex gap-2 flex-wrap justify-center" role="toolbar" aria-label="Opciones de temporada">
-          <button onclick="loadYear('2023')" class="px-4 py-2 rounded-lg text-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-1" style="background-color: #8E0303; font-weight: bold;" aria-label="Ver estadísticas de MVP de 2023">
+          <button id="loadyear-2023" class="px-4 py-2 rounded-lg text-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-1" style="background-color: #8E0303; font-weight: bold;" aria-label="Ver estadísticas de MVP de 2023">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             2023
           </button>
-          <button onclick="loadYear('2024')" class="px-4 py-2 rounded-lg text-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-1" style="background-color: #8E0303; font-weight: bold;" aria-label="Ver estadísticas de MVP de 2024">
+          <button id="loadyear-2024" class="px-4 py-2 rounded-lg text-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-1" style="background-color: #8E0303; font-weight: bold;" aria-label="Ver estadísticas de MVP de 2024">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             2024
           </button>
-          <button onclick="loadYear('combined')" class="px-4 py-2 rounded-lg text-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-1" style="background-color: #8E0303; font-weight: bold;" aria-label="Ver estadísticas combinadas de MVP">
+          <button id="loadyear-combined" class="px-4 py-2 rounded-lg text-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-1" style="background-color: #8E0303; font-weight: bold;" aria-label="Ver estadísticas combinadas de MVP">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
             </svg>
             Combinado
-          </button>
-          <button onclick="loadYear('splits-only')" class="px-4 py-2 rounded-lg text-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-1" style="background-color: #8E0303; font-weight: bold;" aria-label="Ver solo splits de MVP">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-            </svg>
-            Solo Splits
           </button>
         </div>
       </div>
@@ -138,12 +132,13 @@
       </a>
     </nav>
 
-    <audio id="miAudio" src="../assets/mvp.mp3" aria-label="Efecto de sonido de MVP"></audio>
+    <!--<audio id="miAudio" src="../assets/mvp.mp3" aria-label="Sonido de MVP"></audio>-->
+
 
     <div class="relative w-full mb-8 cursor-pointer" onclick="document.getElementById('miAudio').play()" style="justify-content: center;" role="button" tabindex="0" aria-label="Reproducir sonido de MVP">
-      <img src="../assets/portada_mvp.png" alt="Estadísticas de MVP de la Kings League" class="w-full h-112 rounded-lg shadow-lg" width="1200" height="448">
+      <img src="../assets/portada_mvp.png" alt="Estadísticas de MVP de la Mercato Kings" class="w-full h-112 rounded-lg shadow-lg" width="1200" height="448">
       <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50" aria-hidden="true"></div>
-      <h2 class="absolute top-4 left-4 text-white text-2xl font-bold">Estadísticas de MVP - Kings League Mercato</h2>
+      <h2 class="absolute top-4 left-4 text-white text-2xl font-bold">Estadísticas de MVP - Mercato Kings</h2>
     </div>
 
     <main id="main-content">
@@ -154,21 +149,18 @@
           y los transforma en contenido visual e interactivo. Utilizamos técnicas de análisis estadístico avanzado, visualización de datos e inteligencia artificial para ofrecer una experiencia única y enriquecedora.
         </p>
         <p class="text-lg text-gray-500 mt-2">
-          Ideal para entrenadores, analistas y fanáticos de la Kings League, esta herramienta permite explorar el rendimiento de los jugadores de forma profesional, intuitiva y entretenida.
+          Ideal para entrenadores, analistas y fanáticos de la Kings, esta herramienta permite explorar el rendimiento de los jugadores de forma profesional, intuitiva y entretenida.
         </p>
 
         <ul class="list-disc list-inside text-lg text-gray-500 mt-2 space-y-2">
           <li>
-            En <strong>'2023'</strong> se muestra información de los torneos de la <strong>Kings League</strong>, sobre el 1, 2 split, Kings Cup y Kingdom Cup.
+            En <strong>'2023'</strong> se muestra información de los torneos de la <strong>Kings </strong>, sobre el 1, 2 split y 3 split.
           </li>
           <li>
-            En <strong>'2024'</strong> se muestra información de los torneos de la <strong>Kings League</strong>, sobre el 4 y 5 split.
+            En <strong>'2024'</strong> se muestra información de los torneos de la <strong>Kings</strong>, sobre el 4 y 5 split.
           </li>
           <li>
             En <strong>'Combinado'</strong> se muestra la información de todos los torneos de la <strong>Kings</strong>.
-          </li>
-          <li>
-            En <strong>'Solo Splits'</strong> se muestra la información de todos los Splits de la <strong>Kings</strong>.
           </li>
         </ul>
 
@@ -201,7 +193,7 @@
     <footer class="mt-12 pt-8 border-t border-gray-200 text-center text-sm text-gray-600 bg-white">
       <h2 class="text-xl font-semibold mb-4">Acerca de este sitio</h2>
       <p class="max-w-xl mx-auto mb-4 px-4">
-        <strong>Mercato Kings</strong> es una plataforma independiente diseñada para compartir datos, estadísticas y análisis relevantes sobre la <strong>Kings League</strong>, con fines exclusivamente informativos e identificativos.
+        <strong>Mercato Kings</strong> es una plataforma independiente diseñada para compartir datos, estadísticas y análisis relevantes sobre la <strong>Kings</strong>, con fines exclusivamente informativos e identificativos.
       </p>
       <p class="text-xs">Datos estadísticos de la Kings League ©2025</p>
       <p class="mt-1 text-xs">Desarrollado con <span class="text-red-500" aria-hidden="true">♥</span> para los fans del fútbol</p>

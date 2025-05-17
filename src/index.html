@@ -2,9 +2,9 @@
 <html lang="es" dir="ltr">
 <head>
   <meta charset="UTF-8" />
-  <title>Estadísticas Avanzadas - Kings League Mercato | Dashboard Interactivo</title>
-  <meta name="description" content="Dashboard interactivo con estadísticas avanzadas de la Kings League: análisis por jugador, goles, penaltis y más indicadores clave con visualización de datos.">
-  <meta name="keywords" content="Kings League, estadísticas fútbol, análisis jugadores, goles, penaltis, visualización datos, Mercato">
+  <title>Estadísticas Avanzadas - Mercato Kings</title>
+  <meta name="description" content="Dashboard interactivo con estadísticas avanzadas de la Kings: análisis por jugador, goles, penaltis y más indicadores clave con visualización de datos.">
+  <meta name="keywords" content="Kings, estadísticas fútbol, análisis jugadores, goles, penaltis, visualización datos, Mercato">
   <meta name="author" content="Alejandro David Arzola Saavedra">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta name="theme-color" content="#8E0303">
@@ -22,7 +22,7 @@
   <script src="./script.js" type="module"></script>
 </head>
 
-<audio id="miAudio" src="./assets/portada.mp3" aria-label="Efecto de sonido de estadísticas"></audio>
+<!--<audio id="miAudio" src="../assets/portada.mp3" aria-label="Sonido de la portada"></audio>-->
 
 <body class="bg-gradient-to-br from-gray-50 to-gray-100 text-gray-800 min-h-screen p-6">
   <a href="#main-content" class="sr-only focus:not-sr-only focus:px-4 focus:py-2 focus:bg-white focus:text-gray-800 focus:rounded-lg focus:z-50">
@@ -33,9 +33,9 @@
     <header class="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
       <a href="index.html" aria-label="Volver a la página principal de Mercato Kings">
         <div class="flex items-center gap-3">
-          <img src="./assets/kingsIA.svg" alt="Logo Kings League - Estadísticas oficiales" style="width: 6rem" width="96" height="96" loading="lazy">
+          <img src="./assets/kingsIA.svg" alt="Logo Kings - Estadísticas oficiales" style="width: 6rem" width="96" height="96" loading="lazy">
           <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r" style="color: #8E0303;">
-            Estadísticas Avanzadas <span class="block text-xl text-gray-600">Kings League Mercato</span>
+            Estadísticas Avanzadas <span class="block text-xl text-gray-600">Mercato Kings</span>
           </h1>
         </div>
       </a>
@@ -96,9 +96,9 @@
       <button onclick="document.getElementById('miAudio').play()" class="w-full h-full absolute inset-0 z-10 cursor-pointer" aria-label="Reproducir sonido de bienvenida">
         <span class="sr-only">Haz clic para reproducir efecto de sonido</span>
       </button>
-      <img src="./assets/portada.png" alt="Jugadores destacados de la Kings League en acción" class="w-full h-96 object-cover rounded-lg shadow-lg" width="1200" height="400" loading="eager">
+      <img src="./assets/portada.png" alt="Jugadores destacados de la Kings en acción" class="w-full h-96 object-cover rounded-lg shadow-lg" width="1200" height="400" loading="eager">
       <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50 rounded-lg" aria-hidden="true"></div>
-      <h2 class="absolute bottom-4 left-4 text-white text-2xl font-bold">Bienvenido a la Kings League Mercato</h2>
+      <h2 class="absolute bottom-4 left-4 text-white text-2xl font-bold">Bienvenido al Mercato Kings</h2>
     </div>
 
     <main id="main-content" tabindex="-1">
@@ -111,7 +111,7 @@
             y los transforma en contenido visual e interactivo. Utilizamos técnicas de análisis estadístico avanzado, visualización de datos e inteligencia artificial para ofrecer una experiencia única y enriquecedora.
           </p>
           <p class="text-lg text-gray-500 mt-2">
-            Ideal para entrenadores, analistas y fanáticos de la Kings League, esta herramienta permite explorar el rendimiento de los jugadores de forma profesional, intuitiva y entretenida.
+            Ideal para entrenadores, analistas y fanáticos de la Kings, esta herramienta permite explorar el rendimiento de los jugadores de forma profesional, intuitiva y entretenida.
           </p>
         </div>
       </section>
@@ -156,17 +156,17 @@
             <span aria-hidden="true">🤖</span> <span class="sr-only">Icono de robot</span> Modelos a Comparar
           </div>
           <div id="modelSelector">
-            <div class="model-checkbox-container">
+            <div class="model-checkbox-container" style="background-color: #E74C3C; border-radius: 30px;">
               <input type="checkbox" class="model-checkbox" value="tree" id="treeCheckbox" checked aria-labelledby="treeLabel">
               <label for="treeCheckbox" id="treeLabel">Árbol de Decisión</label>
             </div>
             
-            <div class="model-checkbox-container">
+            <div class="model-checkbox-container" style="background-color: #3498DB; border-radius: 30px;">
               <input type="checkbox" class="model-checkbox" value="knn" id="knnCheckbox" checked aria-labelledby="knnLabel">
               <label for="knnCheckbox" id="knnLabel">KNN</label>
             </div>
             
-            <div class="model-checkbox-container">
+            <div class="model-checkbox-container" style="background-color: #2ECC71; border-radius: 30px;">
               <input type="checkbox" class="model-checkbox" value="linear" id="linearCheckbox" checked aria-labelledby="linearLabel">
               <label for="linearCheckbox" id="linearLabel">Regresión Lineal</label>
             </div>
@@ -177,11 +177,11 @@
       <section aria-labelledby="controls-heading">
         <h2 id="controls-heading" class="sr-only">Controles de visualización</h2>
         <div class="zoom-controls">
-          <button id="zoomInBtn" class="zoom-btn" aria-label="Aumentar zoom">+ Zoom In</button>
-          <button id="zoomOutBtn" class="zoom-btn" aria-label="Disminuir zoom">- Zoom Out</button>
-          <button id="resetZoomBtn" class="zoom-btn" aria-label="Restablecer zoom">Reset Zoom</button>
-          <button id="panLeftBtn" class="zoom-btn" aria-label="Desplazar a la izquierda">← Pan Left</button>
-          <button id="panRightBtn" class="zoom-btn" aria-label="Desplazar a la derecha">→ Pan Right</button>
+          <button id="zoomInBtn" style="background-color: #8E0303;" class="zoom-btn" aria-label="Aumentar zoom">+ Zoom In</button>
+          <button id="zoomOutBtn"  style="background-color: #8E0303;" class="zoom-btn" aria-label="Disminuir zoom">- Zoom Out</button>
+          <button id="resetZoomBtn"  style="background-color: #8E0303;" class="zoom-btn" aria-label="Restablecer zoom">Reset Zoom</button>
+          <button id="panLeftBtn"  style="background-color: #8E0303;" class="zoom-btn" aria-label="Desplazar a la izquierda">← Pan Left</button>
+          <button id="panRightBtn"  style="background-color: #8E0303;" class="zoom-btn" aria-label="Desplazar a la derecha">→ Pan Right</button>
         </div>
       </section>
       
@@ -293,13 +293,8 @@
     <footer class="mt-12 pt-8 border-t border-gray-200 text-center text-sm text-gray-600 bg-white">
       <h2 class="text-xl font-semibold mb-4">Acerca de este sitio</h2>
       <p class="max-w-xl mx-auto mb-4 px-4">
-        <strong>Mercato Kings</strong> es una plataforma independiente diseñada para compartir datos, estadísticas y análisis relevantes sobre la <strong>Kings League</strong>, con fines exclusivamente informativos e identificativos.
+        <strong>Mercato Kings</strong> es una plataforma independiente diseñada para compartir datos, estadísticas y análisis relevantes sobre la <strong>Kings</strong>, con fines exclusivamente informativos e identificativos.
       </p>
-      <div class="flex justify-center flex-wrap gap-4 mb-6">
-        <a href="https://www.kingsleague.pro/" target="_blank" class="hover:text-blue-600 transition" rel="noopener noreferrer" aria-label="Página oficial de Kings League (se abre en nueva ventana)">Página oficial</a>
-        <a href="https://www.kingsleague.pro/faq" target="_blank" class="hover:text-blue-600 transition" rel="noopener noreferrer" aria-label="Preguntas frecuentes de Kings League (se abre en nueva ventana)">FAQ</a>
-        <a href="https://www.kingsleague.pro/contact" target="_blank" class="hover:text-blue-600 transition" rel="noopener noreferrer" aria-label="Contacto con Kings League (se abre en nueva ventana)">Contacto</a>
-      </div>
       <p class="mb-2 text-xs">
         Este proyecto utiliza la librería <a href="https://ml5js.org" target="_blank" class="text-blue-500 hover:underline" rel="noopener noreferrer" aria-label="ml5.js - Machine Learning para la web (se abre en nueva ventana)">ml5.js</a>, una herramienta de código abierto desarrollada por la comunidad de NYU ITP/IMA y NYU Shanghai.
       </p>

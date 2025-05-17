@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const container = document.getElementById('carouselContainer');
-    const scrollLeftBtn = document.getElementById('scrollLeft');
-    const scrollRightBtn = document.getElementById('scrollRight');
-    const cardWidth = 250 + 16;
 
-    scrollLeftBtn.addEventListener('click', () => {
-        container.scrollBy({ left: -cardWidth * 4, behavior: 'smooth' });
-    });
+    const button2023 = document.getElementById('loadyear-2023');
+    const button2024 = document.getElementById('loadyear-2024');
+    const buttonCombined = document.getElementById('loadyear-combined');
+    const buttonSplitsOnly = document.getElementById('loadyear-split-only');
 
-    scrollRightBtn.addEventListener('click', () => {
-        container.scrollBy({ left: cardWidth * 4, behavior: 'smooth' });
-    });
+    button2023.addEventListener('click', () => loadYear('2023'));
+    button2024.addEventListener('click', () => loadYear('2024'));
+    buttonCombined.addEventListener('click', () => loadYear('combined'));
+    buttonSplitsOnly.addEventListener('click', () => loadYear('splits-only'));
+
 });
+
+
 
 const cleanName = name => name.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 const playerStats = {};

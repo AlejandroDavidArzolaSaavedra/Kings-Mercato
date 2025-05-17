@@ -1,3 +1,17 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+    const button2023 = document.getElementById('loadyear-2023');
+    const button2024 = document.getElementById('loadyear-2024');
+    const buttonCombined = document.getElementById('loadyear-combined');
+    const buttonSplitsOnly = document.getElementById('loadyear-split-only');
+
+    button2023.addEventListener('click', () => loadYear('2023'));
+    button2024.addEventListener('click', () => loadYear('2024'));
+    buttonCombined.addEventListener('click', () => loadYear('combined'));
+    buttonSplitsOnly.addEventListener('click', () => loadYear('splits-only'));
+
+});
+
 const cleanName = name => {
 if (!name) return '';
 return name.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");

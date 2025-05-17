@@ -4,8 +4,9 @@
 
 ## 📸 Vista previa
 
-![Mercato Kings Screenshot](./assets/preview.png) <!-- Puedes sustituir esto con una imagen real del dashboard -->
+![Mercato Kings Screenshot](./src/assets/captura.png)
 
+[Link de la demo de la página](https://alejandrodavidarzolasaavedra.github.io/Kings-Mercato/)
 ## 🚀 Características
 
 * 🔢 **Estadísticas por categoría**: Goles, tiros, pases, ofensivas, defensivas, tarjetas y MVPs.
@@ -42,8 +43,6 @@
 ```
 
 2. Abre el archivo `index.html` en tu navegador preferido o utiliza un servidor local como Live Server en VSCode.
-
-> ⚠️ Se recomienda utilizar una conexión a internet para cargar las librerías desde CDN.
 
 ## 📌 Objetivos del Proyecto
 

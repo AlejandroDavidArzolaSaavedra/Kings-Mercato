@@ -1,4 +1,4 @@
-# 🏆 Mercato Kings - Estadísticas Avanzadas
+<h1 align="center">Mercato Kings - Estadísticas Avanzadas</h1>
 
 **Mercato Kings** es un dashboard interactivo que ofrece estadísticas avanzadas de la Kings League, incluyendo análisis por jugador, goles, penaltis, tiros, pases, tarjetas y más indicadores clave. Este proyecto permite visualizar los datos de forma intuitiva mediante gráficos y tablas, facilitando un análisis profundo del rendimiento de los jugadores y equipos.
 
@@ -7,14 +7,15 @@
 ![Mercato Kings Screenshot](./src/assets/captura.png)
 
 [Link de la demo de la página](https://alejandrodavidarzolasaavedra.github.io/Kings-Mercato/)
-## 🚀 Características
 
-* 🔢 **Estadísticas por categoría**: Goles, tiros, pases, ofensivas, defensivas, tarjetas y MVPs.
-* 📊 **Visualización de datos** con gráficos interactivos utilizando [ECharts](https://echarts.apache.org/).
-* 🎯 Análisis por jugador y por partido.
-* 🎉 Integración con animaciones y efectos para una experiencia más inmersiva.
-* ⚙️ Responsive y accesible, diseñado con [TailwindCSS](https://tailwindcss.com/).
-* 🤖 Incluye herramientas de análisis como [ml5.js](https://ml5js.org/) y procesamiento de datos con [PapaParse](https://www.papaparse.com/).
+## Características
+
+* **Estadísticas por categoría**: Goles, tiros, pases, ofensivas, defensivas, tarjetas y MVPs.
+* **Visualización de datos** con gráficos interactivos utilizando [ECharts](https://echarts.apache.org/).
+* Análisis por jugador y por partido.
+* Integración con animaciones y efectos para una experiencia más inmersiva.
+* Responsive y accesible, diseñado con [TailwindCSS](https://tailwindcss.com/).
+* Incluye herramientas de análisis como [ml5.js](https://ml5js.org/) y procesamiento de datos con [PapaParse](https://www.papaparse.com/).
 
 ## 📁 Estructura del Proyecto
 
@@ -26,15 +27,15 @@
   📄 styles.css         → Estilos personalizados
 ```
 
-## 🧠 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 * **HTML5**, **CSS3** y **JavaScript ES6**
 * **TailwindCSS** para el diseño responsive
 * **ECharts** para gráficos y visualización
 * **PapaParse** para análisis de datos CSV
-* **ml5.js** para funciones inteligentes (futuras ampliaciones)
-
-## 🔧 Instalación y Uso
+* **ml5.js** para funciones inteligentes
+  
+## Instalación y Uso
 
 1. Clona el repositorio:
 
@@ -44,11 +45,11 @@
 
 2. Abre el archivo `index.html` en tu navegador preferido o utiliza un servidor local como Live Server en VSCode.
 
-## 📌 Objetivos del Proyecto
+## Objetivos del Proyecto
 
 * Visualizar patrones de rendimiento.
 * Crear una interfaz moderna y atractiva.
 
-## 👤 Autor
+## Autor
 
 **Alejandro David Arzola Saavedra**
